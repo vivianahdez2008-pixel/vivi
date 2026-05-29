@@ -1,17 +1,225 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>
-BIENVENIDOS A LA COLECCION DE VIVI 
-</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección de Viviana</title>
+    <style>
+        /* Estilos generales y modernos */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #111; color: white; }
+        
+        /* Menú de navegación fijo en la parte superior */
+        header { background-color: #000; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.5); }
+        h1 { color: #b59b5a; margin: 0; font-size: 2em; }
+        nav { margin-top: 10px; }
+        nav a { text-decoration: none; background: #b59b5a; color: black; padding: 10px 20px; margin: 5px; border-radius: 5px; display: inline-block; font-weight: bold; transition: 0.3s; }
+        nav a:hover { background: #d6a28c; }
+        
+        /* Sección de bienvenida */
+        .hero { text-align: center; padding: 60px 20px; background-image: url('vino.jpg'); background-size: cover; background-position: center; border-bottom: 2px solid #b59b5a; }
+        .hero h2 { font-size: 3em; color: #d6a28c; margin-bottom: 5px; text-shadow: 2px 2px 4px black; }
+        .hero p { font-size: 1.5em; color: #fff; font-style: italic; text-shadow: 1px 1px 3px black; }
+        
+        /* Títulos de Categorías */
+        .section-title { font-family: 'Times New Roman', serif; text-align: center; font-size: 3em; margin: 60px 0 20px; color: #b59b5a; padding-top: 20px;}
+        
+        /* Cuadrícula responsiva de productos */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .p-card { background: white; padding: 15px; border-radius: 10px; text-align: center; color: #333; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: transform 0.2s; }
+        .p-card:hover { transform: scale(1.05); }
+        .p-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        .p-card h3 { margin: 10px 0 5px; font-size: 1.1em; color: #555; }
+        .p-card p { font-size: 1.3em; font-weight: bold; color: #222; margin: 0 0 10px; }
+        
+        /* Botones de compra */
+        .btn-comprar { display: inline-block; background: #722f37; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 80%; }
+        .btn-comprar:hover { background: #8e3b45; }
+        
+        /* Sección de contacto */
+        .contact-section { display: flex; justify-content: center; flex-wrap: wrap; padding: 50px 20px; background: #222; margin-top: 50px; border-top: 2px solid #b59b5a; }
+        .form-container, .info-container { width: 100%; max-width: 400px; margin: 20px; }
+        input, textarea { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 5px; box-sizing: border-box; }
+        button[type="submit"] { background: #722f37; color: white; padding: 15px; width: 100%; border: none; cursor: pointer; font-size: 1.1em; border-radius: 5px; font-weight: bold; }
+        button[type="submit"]:hover { background: #8e3b45; }
+        .whatsapp-btn { display: inline-block; background: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+    </style>
 </head>
+<body>
 
- <frameset cols="280,*" framespacing="0" frameborde="no">
- <frame src="menu.html" name="marco izquierdo">
- <frameset rows="160,*" framespacing="0" frameborde="no" bordecolor="black">
- <frame src="titulo.html" name="marco superior">
- <frame src="contenido.html" name="marco derecho">
- </frameset>
- <body leftmargin="25" topmargin="25">
- </body>
- <a href="URL">BIENVENIDOS A DULCE DELICIA</a>
- </html> 
+    <!-- Menú Superior Fijo -->
+    <header>
+        <h1>COLECCIÓN DE VIVI</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#vestidos">Vestidos</a>
+            <a href="#blusas">Blusas</a>
+            <a href="#faldas">Faldas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Presentación -->
+    <section id="inicio" class="hero">
+        <h2>Colección de <i>Viviana</i></h2>
+        <p>Viste de confianza, brilla todos los días.</p>
+        <h3 style="color:#b59b5a; margin-top: 20px; background: rgba(0,0,0,0.7); display: inline-block; padding: 10px 20px; border-radius: 5px;">
+            CONTAMOS CON SISTEMA DE APARTADO
+        </h3>
+    </section>
+
+    <!-- ==================== SECCIÓN VESTIDOS ==================== -->
+    <h2 id="vestidos" class="section-title">VESTIDOS</h2>
+    <div class="grid-container">
+        <div class="p-card"><img src="1.jpg" alt="Vestido"><h3>Vestido</h3><p>$500</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="2.jpg" alt="Vestido"><h3>Vestido</h3><p>$380</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="3.jpg" alt="Vestido"><h3>Vestido</h3><p>$290</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="4.jpg" alt="Vestido"><h3>Vestido</h3><p>$350</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="vestido.jpg" alt="Vestido"><h3>Vestido</h3><p>$400</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="5.jpg" alt="Vestido"><h3>Vestido</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="6.jpg" alt="Vestido"><h3>Vestido</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="7.jpg" alt="Vestido"><h3>Vestido</h3><p>$240</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="8.jpg" alt="Vestido"><h3>Vestido</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="9.jpg" alt="Vestido"><h3>Vestido</h3><p>$260</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="10.jpg" alt="Vestido"><h3>Vestido</h3><p>$240</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="11.jpg" alt="Vestido"><h3>Vestido</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="12.jpg" alt="Vestido"><h3>Vestido</h3><p>$275</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="13.jpg" alt="Vestido"><h3>Vestido</h3><p>$300</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="14.jpg" alt="Vestido"><h3>Vestido</h3><p>$238</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="15.jpg" alt="Vestido"><h3>Vestido</h3><p>$280</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="16.jpg" alt="Vestido"><h3>Vestido</h3><p>$252</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="17.jpg" alt="Vestido"><h3>Vestido</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="18.jpg" alt="Vestido"><h3>Vestido</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="19.jpg" alt="Vestido"><h3>Vestido</h3><p>$225</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="20.jpg" alt="Vestido"><h3>Vestido</h3><p>$336</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="21.jpg" alt="Vestido"><h3>Vestido</h3><p>$260</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="22.jpg" alt="Vestido"><h3>Vestido</h3><p>$395</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="23.jpg" alt="Vestido"><h3>Vestido</h3><p>$235</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="24.jpg" alt="Vestido"><h3>Vestido</h3><p>$225</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="25.jpg" alt="Vestido"><h3>Vestido</h3><p>$215</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="26.jpg" alt="Vestido"><h3>Vestido</h3><p>$300</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="27.jpg" alt="Vestido"><h3>Vestido</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="28.jpg" alt="Vestido"><h3>Vestido</h3><p>$279</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="30.jpg" alt="Vestido"><h3>Vestido</h3><p>$380</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="31.jpg" alt="Vestido"><h3>Vestido</h3><p>$340</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="32.jpg" alt="Vestido"><h3>Vestido</h3><p>$290</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="33.jpg" alt="Vestido"><h3>Vestido</h3><p>$360</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="34.jpg" alt="Vestido"><h3>Vestido</h3><p>$321</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="35.jpg" alt="Vestido"><h3>Vestido</h3><p>$310</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="36.jpg" alt="Vestido"><h3>Vestido</h3><p>$365</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="37.jpg" alt="Vestido"><h3>Vestido</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="38.jpg" alt="Vestido"><h3>Vestido</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="39.jpg" alt="Vestido"><h3>Vestido</h3><p>$270</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="40.jpg" alt="Vestido"><h3>Vestido</h3><p>$260</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+    </div>
+
+    <!-- ==================== SECCIÓN BLUSAS ==================== -->
+    <h2 id="blusas" class="section-title">BLUSAS</h2>
+    <div class="grid-container">
+        <div class="p-card"><img src="41.jpg" alt="Blusa"><h3>Blusa</h3><p>$180</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="42.jpg" alt="Blusa"><h3>Blusa</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="43.jpg" alt="Blusa"><h3>Blusa</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="44.jpg" alt="Blusa"><h3>Blusa</h3><p>$195</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="45.jpg" alt="Blusa"><h3>Blusa</h3><p>$125</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="46.jpg" alt="Blusa"><h3>Blusa</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="47.jpg" alt="Blusa"><h3>Blusa</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="48.jpg" alt="Blusa"><h3>Blusa</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="49.jpg" alt="Blusa"><h3>Blusa</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="50.jpg" alt="Blusa"><h3>Blusa</h3><p>$189</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="51.jpg" alt="Blusa"><h3>Blusa</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="52.jpg" alt="Blusa"><h3>Blusa</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="53.jpg" alt="Blusa"><h3>Blusa</h3><p>$165</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="54.jpg" alt="Blusa"><h3>Blusa</h3><p>$170</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="55.jpg" alt="Blusa"><h3>Blusa</h3><p>$198</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="56.jpg" alt="Blusa"><h3>Blusa</h3><p>$180</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="57.jpg" alt="Blusa"><h3>Blusa</h3><p>$152</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="58.jpg" alt="Blusa"><h3>Blusa</h3><p>$150</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="59.jpg" alt="Blusa"><h3>Blusa</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="60.jpg" alt="Blusa"><h3>Blusa</h3><p>$135</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="61.jpg" alt="Blusa"><h3>Blusa</h3><p>$156</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="62.jpg" alt="Blusa"><h3>Blusa</h3><p>$160</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="63.jpg" alt="Blusa"><h3>Blusa</h3><p>$195</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="64.jpg" alt="Blusa"><h3>Blusa</h3><p>$235</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="65.jpg" alt="Blusa"><h3>Blusa</h3><p>$195</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="66.jpg" alt="Blusa"><h3>Blusa</h3><p>$215</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="67.jpg" alt="Blusa"><h3>Blusa</h3><p>$170</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="68.jpg" alt="Blusa"><h3>Blusa</h3><p>$150</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="69.jpg" alt="Blusa"><h3>Blusa</h3><p>$179</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="70.jpg" alt="Blusa"><h3>Blusa</h3><p>$180</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="71.jpg" alt="Blusa"><h3>Blusa</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="72.jpg" alt="Blusa"><h3>Blusa</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="73.jpg" alt="Blusa"><h3>Blusa</h3><p>$197</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="74.jpg" alt="Blusa"><h3>Blusa</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="75.jpg" alt="Blusa"><h3>Blusa</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="76.jpg" alt="Blusa"><h3>Blusa</h3><p>$193</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="77.jpg" alt="Blusa"><h3>Blusa</h3><p>$150</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="78.jpg" alt="Blusa"><h3>Blusa</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="79.jpg" alt="Blusa"><h3>Blusa</h3><p>$190</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="80.jpg" alt="Blusa"><h3>Blusa</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+    </div>
+
+    <!-- ==================== SECCIÓN FALDAS ==================== -->
+    <h2 id="faldas" class="section-title">FALDAS</h2>
+    <div class="grid-container">
+        <div class="p-card"><img src="81.jpg" alt="Falda"><h3>Falda</h3><p>$150</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="82.jpg" alt="Falda"><h3>Falda</h3><p>$180</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="83.jpg" alt="Falda"><h3>Falda</h3><p>$290</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="84.jpg" alt="Falda"><h3>Falda</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="85.jpg" alt="Falda"><h3>Falda</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="86.jpg" alt="Falda"><h3>Falda</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="87.jpg" alt="Falda"><h3>Falda</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="88.jpg" alt="Falda"><h3>Falda</h3><p>$240</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="89.jpg" alt="Falda"><h3>Falda</h3><p>$210</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="90.jpg" alt="Falda"><h3>Falda</h3><p>$260</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="91.jpg" alt="Falda"><h3>Falda</h3><p>$240</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="92.jpg" alt="Falda"><h3>Falda</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="93.jpg" alt="Falda"><h3>Falda</h3><p>$275</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="94.jpg" alt="Falda"><h3>Falda</h3><p>$300</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="95.jpg" alt="Falda"><h3>Falda</h3><p>$338</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="96.jpg" alt="Falda"><h3>Falda</h3><p>$280</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="97.jpg" alt="Falda"><h3>Falda</h3><p>$252</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="98.jpg" alt="Falda"><h3>Falda</h3><p>$250</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="99.jpg" alt="Falda"><h3>Falda</h3><p>$220</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="100.jpg" alt="Falda"><h3>Falda</h3><p>$235</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="101.jpg" alt="Falda"><h3>Falda</h3><p>$356</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="102.jpg" alt="Falda"><h3>Falda</h3><p>$360</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="103.jpg" alt="Falda"><h3>Falda</h3><p>$295</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="104.jpg" alt="Falda"><h3>Falda</h3><p>$235</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="105.jpg" alt="Falda"><h3>Falda</h3><p>$395</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="106.jpg" alt="Falda"><h3>Falda</h3><p>$215</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="107.jpg" alt="Falda"><h3>Falda</h3><p>$300</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="108.jpg" alt="Falda"><h3>Falda</h3><p>$399</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="109.jpg" alt="Falda"><h3>Falda</h3><p>$479</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="110.jpg" alt="Falda"><h3>Falda</h3><p>$280</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="111.jpg" alt="Falda"><h3>Falda</h3><p>$200</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="112.jpg" alt="Falda"><h3>Falda</h3><p>$310</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="113.jpg" alt="Falda"><h3>Falda</h3><p>$294</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="114.jpg" alt="Falda"><h3>Falda</h3><p>$252</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="115.jpg" alt="Falda"><h3>Falda</h3><p>$300</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="116.jpg" alt="Falda"><h3>Falda</h3><p>$288</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="117.jpg" alt="Falda"><h3>Falda</h3><p>$296</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="118.jpg" alt="Falda"><h3>Falda</h3><p>$398</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="119.jpg" alt="Falda"><h3>Falda</h3><p>$410</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+        <div class="p-card"><img src="120.jpg" alt="Falda"><h3>Falda</h3><p>$384</p><a href="#contacto" class="btn-comprar">Comprar</a></div>
+    </div>
+
+    <!-- ==================== SECCIÓN CONTACTO ==================== -->
+    <section id="contacto" class="contact-section">
+        <div class="form-container">
+            <h2 style="color:#b59b5a;">¡Haz tu pedido hoy mismo!</h2>
+            <form action="https://formspree.io/f/tu_codigo" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo" required>
+                <textarea name="mensaje" placeholder="Indícanos qué artículo te interesó..." rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="info-container">
+            <h2 style="color:#b59b5a;">Contáctanos</h2>
+            <p style="font-size: 1.2em;">☎️ <strong>+58 412-3977798</strong></p>
+            <p style="font-size: 1.2em;">💬 <strong>WhatsApp</strong></p>
+            <a href="https://wa.me/584123977798" class="whatsapp-btn" target="_blank">📱 Enviar mensaje</a>
+        </div>
+    </section>
+
+</body>
+</html>
